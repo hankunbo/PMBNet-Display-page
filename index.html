@@ -1,1 +1,117 @@
+<html lang="en">
 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PMBNet</title>
+<link href="saved_pdf/style.css" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+   <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px; /* 设置间隙 */
+        }
+        .caption {
+            grid-column: span 6;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .media-container {
+            grid-column: span 6;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px; /* 设置间隙 */
+        }
+        .media-container figure {
+            margin: 0;
+            text-align: center;
+        }
+        .media-container figcaption {
+            margin-bottom: 5px;
+        }
+        .media-container video,
+        .media-container img {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+      <h1><strong>Progressive Multi-Branch Video Style Transfer Network via confidence reweighted Projection</strong></h1>
+      <p id="authors"><span>
+      <a href=""></a></span>
+      <a href="" style="pointer-events: none; text-decoration:none; color: black;">Kunbo Han</a>
+      <a href="" style="pointer-events: none; text-decoration:none; color: black;">Chunmei Qing</a>
+      <a href="" style="pointer-events: none; text-decoration:none; color: black;">Junpeng Tan</a>
+      <a href="" style="pointer-events: none; text-decoration:none; color: black;">Xiangmin Xu</a>
+    <br>
+  </span></p>
+  <br>
+<!--  <img src="./saved_pdf/Effect - Square Diagram.pdf" class="teaser-gif" style="width:100%;"><br>  -->
+      <div style="text-align: center;">
+      	<iframe allowfullscreen src="saved_pdf/Effect - Square Diagram.pdf" width="720px" height="750px"></iframe>
+      </div>
+  <h3 style="text-align:center"><em>Visualization results of <bf>PMBNet</bf> for image style transfer across eight style reference images is shown above. </em></h3>
+</div>
+
+<div class="content">
+  <h2 style="text-align:center;"><strong>Abstract</strong></h2>
+<p>Structural integrity of content is a challenge to achieve high-quality video styling. However, existing video style transfer methods tend to amplify the slight noise present in the input video, 
+     resulting in unsmooth transitions between stylized video frames. This can lead to visual flickering and discontinuities over time. Besides, the lack of style consistency between video frames or 
+     between different modes can make the overall style of the video appear fragmented or unnatural. To address these issues, this paper proposes an innovative real-time end-to-end video style 
+     transfer model, called Progressive Multi-Branch Video Style Transfer Network (PMBNet). It mainly proposes a Multi-layer Branch Semantic Transformation Structure (MBSTS), which includes a multi-salce 
+     features extraction layer with some multi-parallel progressive sub-modules and a multi-level feature fusion layer with some channel spatial attention sub-modules. Specifically, multi-parallel progressive 
+     sub-modules are used to expand a series of convolutional layers with an increasing dilation rate to prevent the grid phenomenon when different sizes of receptive fields are obtained and enlarge the receptive 
+     field. The channel spatial attention sub-module to cross-fuse the content features and style features of the corresponding branch output and learns the feature information of different scales. 
+     The confidence reweighted calculation is introduced to select a primary pattern from multiple possible patterns to ensure modal content structure consistency and maintain perceptual quality.</p>
+</div>
+
+<div class="content">
+  <h3 style="text-align:center"><strong>Knife - Original Video - Sketch-Knife - Styled Video - Detail analysis</strong></h3>
+  <p style="text-align: center;"> 
+    PMBNet can make video frame transitions smoother, addressing visual flicker and discontinuity
+  </p>
+   <div style="text-align: center;">
+     <iframe allowfullscreen src="https://player.bilibili.com/player.html?aid=113000136639320&cid=500001657285708&page=1&high_quality=1" width="640px" height="720px"></iframe>
+   </div>
+   <h3 style="text-align:center"><strong>Original Video-Styled Video -  Residual heatmap comparison</strong></h3>
+   <div style="text-align: center;">
+      <iframe allowfullscreen src="https://player.bilibili.com/player.html?aid=113000136641364&cid=500001657286426&page=1&high_quality=1" width="640px" height="360px"></iframe>
+   </div>
+</div>
+
+<div class="content">
+  <h3 style="text-align:center"><strong>Tunnel Exit - Original Video - Woman_in_peasant_dress-Tunnel Exit - Styled Video - Brightness Detail Comparison</strong></h3>
+  <p style="text-align: center;">
+    In scenes with rapidly changing brightness, PMBNet generates a more stable stylized video.
+  </p>
+   <div style="text-align: center;">
+      <iframe allowfullscreen src="https://player.bilibili.com/player.html?aid=113000136639045&cid=500001657292985&page=1&high_quality=1" width="640px" height="720px"></iframe>
+   </div>
+</div>
+
+<div class="content">
+  <h3 style="text-align:center"><strong>Focus adjustment - Original Video - Color_bu2 - Styled Video - Fuzzy detail comparison<strong></h3>
+  <p style="text-align: center;">
+    In scenes with rapidly changing clarity, the color and building contrast in PMBNet's output video is closer to the input video.
+  </p>
+   <div style="text-align: center;">
+      <iframe allowfullscreen src="https://player.bilibili.com/player.html?aid=113000136641362&cid=500001657293299&page=1&high_quality=1" width="640px" height="854px"></iframe>
+   </div>
+</div>
+
+<div class="content">
+  <h3 style="text-align:center"><strong>Metro - Original Video - Wall_Metro - Styled Video - Comparison of high-speed movement<strong></h3>
+  <p style="text-align: center;">
+    In high-speed moving scenes, PMBNet's results depict the texture of style wall cracks with finer brushstrokes.
+  </p>
+   <div style="text-align: center;">
+        <iframe allowfullscreen src="https://player.bilibili.com/player.html?aid=113000136704589&cid=500001657287442&page=1&high_quality=1" width="640px" height="720px"></iframe>
+   </div>
+</div>
+  </body>
+
+</html>
